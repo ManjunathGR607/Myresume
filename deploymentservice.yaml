@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment # Kubernetes resource kind we are creating
 metadata:
-  name: devpro
+  name: res
 spec:
   selector:
     matchLabels:
-      app: devpro
+      app: res
   replicas: 2 # Number of replicas that will be created for this deployment
   template:
     metadata:
       labels:
-        app: devpro
+        app: res
     spec:
       containers:
-        - name: devpro
-          image: manjunathgr/mydetails # Image that will be used to containers in the cluster
+        - name: res
+          image: manjunathgr/resume # Image that will be used to containers in the cluster
           imagePullPolicy: Always
           ports:
             - containerPort: 80 # The port that the container is running on in the cluster
@@ -25,10 +25,10 @@ spec:
 apiVersion: v1 # Kubernetes API version
 kind: Service # Kubernetes resource kind we are creating
 metadata: # Metadata of the resource kind we are creating
-  name: devpro
+  name: res
 spec:
   selector:
-    app: devpro
+    app: res
   ports:
     - protocol: "TCP"
       port: 80 # The port that the service is running on in the cluster
