@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: res
-          image: manjunathgr/resume # Image that will be used to containers in the cluster
+          image: manjunathgr/resume:latest # Image that will be used to containers in the cluster
           imagePullPolicy: Always
           ports:
             - containerPort: 80 # The port that the container is running on in the cluster
