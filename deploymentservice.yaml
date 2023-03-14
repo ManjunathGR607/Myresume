@@ -20,7 +20,7 @@ spec:
           - name: BUILD_NUMBER
             valueFrom:
               configMapKeyRef:
-                name: congif
+                name: config
                 key: buildNumber
         ports:
         - containerPort: 8080
