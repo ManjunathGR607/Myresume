@@ -18,6 +18,9 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 80 # The port that the container is running on in the cluster
+          env: 
+          - name: BUILD_NUMBER
+            value: "${BUILD_NUMBER}"
 
 
 ---
