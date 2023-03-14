@@ -10,7 +10,7 @@ spec:
   template:
     metadata:
       labels:
-        app: YOUR_APP_LABEL
+        app: resume
     spec:
       containers:
       - name: resume
