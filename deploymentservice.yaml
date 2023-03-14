@@ -17,13 +17,7 @@ spec:
           image: manjunathgr/resume:latest
           ports:
             - containerPort: 80
-          env:
-            - name: BUILD_NUMBER
-              valueFrom:
-                configMapKeyRef:
-                  name: build-number
-                  key: build_number
-          
+                   
 ---
 
 apiVersion: v1 # Kubernetes API version
