@@ -17,6 +17,11 @@ spec:
           image: manjunathgr/resume:latest
           ports:
             - containerPort: 80
+   strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
                    
 ---
 
