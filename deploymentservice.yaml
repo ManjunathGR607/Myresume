@@ -40,4 +40,4 @@ kind: ConfigMap
 metadata:
   name: config
 data:
-  buildNumber: ${BUILD_NUMBER}
+  buildNumber: "${BUILD_NUMBER}"
