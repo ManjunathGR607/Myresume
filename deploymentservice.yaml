@@ -15,6 +15,7 @@ spec:
       containers:
         - name: myapp
           image: manjunathgr/resume
+          imagePullPolicy: Always
           ports:
             - containerPort: 80
   strategy:
