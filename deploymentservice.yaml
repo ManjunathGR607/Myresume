@@ -14,14 +14,14 @@ spec:
     spec:
       containers:
       - name: resume
-        image: manjunathgr/resume:{{.Values.BUILD_NUMBER}}
+        image: manjunathgr/resume:${BUILD_NUMBER}
         imagePullPolicy: Always
         env:
           - name: BUILD_NUMBER
             valueFrom:
               configMapKeyRef:
                 name: congif
-                key: BUILD_NUMBER
+                key: buildNumber
         ports:
         - containerPort: 8080
       restartPolicy: Always
@@ -40,4 +40,4 @@ kind: ConfigMap
 metadata:
   name: config
 data:
-  buildNumber: "{{.Values.$BUILD_NUMBER}}"
+  buildNumber: ${BUILD_NUMBER}
