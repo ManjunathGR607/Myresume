@@ -13,11 +13,16 @@ spec:
         app: res
     spec:
       containers:
-        - name: res
-          image: manjunathgr/resume:latest # Image that will be used to containers in the cluster
-          imagePullPolicy: Always
+        - name: myapp
+          image: manjunathgr/resume:latest
           ports:
-            - containerPort: 80 # The port that the container is running on in the cluster
+            - containerPort: 80
+          env:
+            - name: BUILD_NUMBER
+              valueFrom:
+                configMapKeyRef:
+                  name: build-number
+                  key: build_number
           
 ---
 
