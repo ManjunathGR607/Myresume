@@ -14,10 +14,13 @@ spec:
     spec:
       containers:
         - name: myapp
-          image: manjunathgr/resume
+          image: manjunathgr/resume:${BUILD_NUMBER}
           imagePullPolicy: Always
           ports:
             - containerPort: 80
+          env:
+            - name: BUILD_NUMBER
+              value: ${BUILD_NUMBER}
   strategy:
     type: RollingUpdate
     rollingUpdate:
