@@ -19,7 +19,7 @@ spec:
           ports:
             - containerPort: 80
           env:
-            - name: BUILD_NUMBER
+            - name: build
               value: ${BUILD_NUMBER}
   strategy:
     type: RollingUpdate
