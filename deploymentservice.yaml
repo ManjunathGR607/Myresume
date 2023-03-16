@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: myapp
-          image: manjunathgr/resume:$BUILD_NUMBER
+          image: manjunathgr/resume:${BUILD_NUMBER}
           imagePullPolicy: Always
           ports:
             - containerPort: 80
